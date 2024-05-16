@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Reestruturado</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        .purple-box {
+            width: 238px;
+            height: 70px;
+            position: absolute;
+            left: 1315px;
+            top: 797px;
+            background: #9747FF;
+            border-radius: 50px;
+            border: 1px solid black;
+        }
+
+        .grey-box {
+            width: 144px;
+            height: 47px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #D9D9D9;
+            border: 1px solid black;
+        }
+
+        .logo-text {
+            position: absolute;
+            left: 61px;
+            top: 16px;
+            color: black;
+            font-size: 12px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .diagonal-line {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            border: 2px solid black;
+        }
+
+        .diagonal-line-1 {
+            left: 1314.99px;
+            top: 488.27px;
+            transform: rotate(-40.47deg);
+        }
+
+        .diagonal-line-2 {
+            left: 1286px;
+            top: 463px;
+            transform: rotate(40.47deg);
+        }
+
+        .diagonal-line-3 {
+            left: 1314.99px;
+            top: 477.27px;
+            transform: rotate(-40.47deg);
+        }
+
+        .diagonal-line-4 {
+            left: 1286px;
+            top: 452px;
+            transform: rotate(40.47deg);
+        }
+
+        .circle-white {
+            width: 314px;
+            height: 314px;
+            position: absolute;
+            left: 270px;
+            top: 384px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid #C500D7;
+        }
+
+        .placeholder-image {
+            width: 219px;
+            height: 219px;
+            position: absolute;
+            left: 318px;
+            top: 431px;
+        }
+
+        .small-box {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+
+        .bordered-box {
+            width: 37.14px;
+            height: 37.14px;
+            position: absolute;
+            left: 1.43px;
+            top: 1.43px;
+            border: 2.14px solid #9747FF;
+        }
+
+        .small-purple-box {
+            width: 37px;
+            height: 37px;
+            position: absolute;
+            left: 270px;
+            top: 8px;
+            background: #9747FF;
+        }
+
+        .medium-purple-box {
+            width: 39px;
+            height: 36px;
+            position: absolute;
+            left: 352px;
+            top: 13px;
+            background: #9747FF;
+        }
+
+        .search-bar {
+            width: 569px;
+            height: 33px;
+            position: absolute;
+            left: 665px;
+            top: 12px;
+            background: white;
+            border-radius: 50px;
+            border: 2px solid #BD00FF;
+        }
+
+        .flex-box {
+            width: 40px;
+            height: 37px;
+            position: absolute;
+            left: 185px;
+            top: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .flex-box-inner {
+            width: 40px;
+            height: 37px;
+            background: #9747FF;
+        }
+
+        .flex-box-text {
+            color: black;
+            font-size: 20px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .rounded-black-box {
+            width: 45px;
+            height: 39px;
+            position: absolute;
+            left: 1196px;
+            top: 8px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .rounded-inner-box {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 1197px;
+            top: 8px;
+        }
+
+        .small-purple-inner-box {
+            width: 33.75px;
+            height: 33.75px;
+            position: absolute;
+            left: 5.62px;
+            top: 5.62px;
+            background: #9747FF;
+        }
+
+        .search-text {
+            width: 141px;
+            height: 22px;
+            position: absolute;
+            left: 681px;
+            top: 7px;
+            color: rgba(0, 0, 0, 0.50);
+            font-size: 17px;
+            font-family: Inknut Antiqua;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .grey-circle {
+            width: 81px;
+            height: 81px;
+            position: absolute;
+            left: 497px;
+            top: 615px;
+            background: #ECECEC;
+            border-radius: 50%;
+        }
+
+        .small-grey-box {
+            width: 41px;
+            height: 37px;
+            position: absolute;
+            left: 517px;
+            top: 637px;
+        }
+
+        .small-grey-inner-box {
+            width: 41px;
+            height: 37px;
+            position: absolute;
+            background: #9747FF;
+        }
+
+        .black-bar {
+            width: 758px;
+            height: 83px;
+            position: absolute;
+            left: 795px;
+            top: 369px;
+            background: black;
+            border-radius: 76px;
+            border: 2px solid #9747FF;
+        }
+
+        .user-name {
+            position: absolute;
+            left: 847px;
+            top: 391px;
+            color: #A6A6A6;
+            font-size: 32px;
+            font-family: Inter;
+            font-weight: 400;
+            text-decoration: underline;
+            word-wrap: break-word;
+        }
+
+        .diagonal-line-5 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 355.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-6 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 330px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-7 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 344.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-8 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 319px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .black-bar-2 {
+            width: 758px;
+            height: 83px;
+            position: absolute;
+            left: 795px;
+            top: 236px;
+            background: black;
+            border-radius: 76px;
+            border: 2px solid #9747FF;
+        }
+
+        .nickname {
+            position: absolute;
+            left: 847px;
+            top: 258px;
+            color: #A6A6A6;
+            font-size: 32px;
+            font-family: Inter;
+            font-weight: 400;
+            text-decoration: underline;
+            word-wrap: break-word;
+        }
+
+        .diagonal-line-9 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 765.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-10 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 740px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-11 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 754.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-12 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 729px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .black-bar-3 {
+            width: 758px;
+            height: 83px;
+            position: absolute;
+            left: 795px;
+            top: 646px;
+            background: black;
+            border-radius: 76px;
+            border: 2px solid #9747FF;
+        }
+
+        .password {
+            position: absolute;
+            left: 847px;
+            top: 668px;
+            color: #A6A6A6;
+            font-size: 32px;
+            font-family: Inter;
+            font-weight: 400;
+            text-decoration: underline;
+            word-wrap: break-word;
+        }
+
+        .diagonal-line-13 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 632.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-14 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 607px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-15 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1314.99px;
+            top: 621.27px;
+            transform: rotate(-40.47deg);
+            border: 2px solid black;
+        }
+
+        .diagonal-line-16 {
+            width: 38.13px;
+            height: 0;
+            position: absolute;
+            left: 1286px;
+            top: 596px;
+            transform: rotate(40.47deg);
+            border: 2px solid black;
+        }
+
+        .black-bar-4 {
+            width: 758px;
+            height: 83px;
+            position: absolute;
+            left: 795px;
+            top: 513px;
+            background: black;
+            border-radius: 76px;
+            border: 2px solid #9747FF;
+        }
+
+        .email {
+            position: absolute;
+            left: 848px;
+            top: 533px;
+            color: #A6A6A6;
+            font-size: 32px;
+            font-family: Inter;
+            font-weight: 400;
+            text-decoration: underline;
+            word-wrap: break-word;
+        }
+
+        .large-purple-box {
+            width: 369px;
+            height: 70px;
+            position: absolute;
+            left: 795px;
+            top: 797px;
+            background: #9747FF;
+            border-radius: 50px;
+        }
+
+        .theme-text {
+            position: absolute;
+            left: 839px;
+            top: 812px;
+            color: white;
+            font-size: 32px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .large-white-box {
+            width: 236px;
+            height: 70px;
+            position: absolute;
+            left: 1152px;
+            top: 797px;
+            background: white;
+            border-radius: 50px;
+            border: 2px solid #9747FF;
+        }
+
+        .theme-option {
+            width: 180px;
+            position: absolute;
+            left: 1243px;
+            top: 817px;
+            color: #9747FF;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .theme-option-light {
+            width: 83px;
+            position: absolute;
+            left: 1434px;
+            top: 817px;
+            color: white;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .theme-indicator {
+            width: 60px;
+            height: 70px;
+            position: absolute;
+            left: 1125px;
+            top: 797px;
+            background: #9747FF;
+        }
+
+        .white-dot {
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            border: 0.20px solid black;
+        }
+
+        .white-dot-1 {
+            left: 1158px;
+            top: 817px;
+        }
+
+        .white-dot-2 {
+            left: 1158px;
+            top: 840px;
+        }
+
+        .save-button {
+            width: 214px;
+            height: 63px;
+            position: absolute;
+            left: 1614px;
+            top: 954px;
+            background: #9747FF;
+            border-radius: 47px;
+        }
+
+        .discard-button {
+            width: 214px;
+            height: 63px;
+            position: absolute;
+            left: 1357px;
+            top: 954px;
+            background: black;
+            border-radius: 47px;
+            border: 2px solid #9747FF;
+        }
+
+        .button-text {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .save-text {
+            left: 1686px;
+            top: 971px;
+        }
+
+        .discard-text {
+            left: 1408px;
+            top: 971px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="purple-box"></div>
+        <div class="grey-box"></div>
+        <div class="logo-text">logo</div>
+        <div class="diagonal-line diagonal-line-1"></div>
+        <div class="diagonal-line diagonal-line-2"></div>
+        <div class="diagonal-line diagonal-line-3"></div>
+        <div class="diagonal-line diagonal-line-4"></div>
+        <div class="circle-white"></div>
+        <img class="placeholder-image" src="https://via.placeholder.com/219x219" />
+        <div class="small-box">
+            <div class="bordered-box"></div>
+        </div>
+        <div class="small-purple-box"></div>
+        <div class="medium-purple-box"></div>
+        <div class="search-bar"></div>
+        <div class="flex-box">
+            <div class="flex-box-inner"></div>
+            <div class="flex-box-text">H</div>
+        </div>
+        <div class="rounded-black-box"></div>
+        <div class="rounded-inner-box">
+            <div class="small-purple-inner-box"></div>
+        </div>
+        <div class="search-text">Pesquisar</div>
+        <div class="grey-circle"></div>
+        <div class="small-grey-box">
+            <div class="small-grey-inner-box"></div>
+        </div>
+        <div class="black-bar"></div>
+        <div class="user-name">Nome de usuário</div>
+        <div class="diagonal-line diagonal-line-5"></div>
+        <div class="diagonal-line diagonal-line-6"></div>
+        <div class="diagonal-line diagonal-line-7"></div>
+        <div class="diagonal-line diagonal-line-8"></div>
+        <div class="black-bar-2"></div>
+        <div class="nickname">Apelido</div>
+        <div class="diagonal-line diagonal-line-9"></div>
+        <div class="diagonal-line diagonal-line-10"></div>
+        <div class="diagonal-line diagonal-line-11"></div>
+        <div class="diagonal-line diagonal-line-12"></div>
+        <div class="black-bar-3"></div>
+        <div class="password">Senha</div>
+        <div class="diagonal-line diagonal-line-13"></div>
+        <div class="diagonal-line diagonal-line-14"></div>
+        <div class="diagonal-line diagonal-line-15"></div>
+        <div class="diagonal-line diagonal-line-16"></div>
+        <div class="black-bar-4"></div>
+        <div class="email">Email</div>
+        <div class="large-purple-box"></div>
+        <div class="theme-text">Tema</div>
+        <div class="large-white-box"></div>
+        <div class="theme-option">Escuro</div>
+        <div class="theme-option-light">Claro</div>
+        <div class="theme-indicator"></div>
+        <div class="white-dot white-dot-1"></div>
+        <div class="white-dot white-dot-2"></div>
+        <div class="save-button"></div>
+        <div class="discard-button"></div>
+        <div class="button-text save-text">Salvar</div>
+        <div class="button-text discard-text">Descartar</div>
+    </div>
+</body>
+</html>
